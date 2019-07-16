@@ -1,0 +1,18 @@
+  var ToEmail, BccEmail;
+  
+  if (Browser.msgBox('Confirm', 'Send Email?',Browser.Buttons.YES_NO) ==='yes')
+  {
+    var subjectline = 'Subject Line';
+    var body = "<HTML><Body> HTML BODY </BODY></HTML>";
+    
+    MailApp.sendEmail({
+      to: ToEmail,
+      bcc: BccEmail,
+      subject:subjectline,
+      htmlBody:body})
+  }
+  else
+  {
+    ui.alert('No Email sent.');
+  }
+}
