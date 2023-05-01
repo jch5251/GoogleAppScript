@@ -1,18 +1,13 @@
-  var ToEmail, BccEmail;
-  
-  if (Browser.msgBox('Confirm', 'Send Email?',Browser.Buttons.YES_NO) ==='yes')
-  {
-    var subjectline = 'Subject Line';
-    var body = "<HTML><Body> HTML BODY </BODY></HTML>";
-    
-    MailApp.sendEmail({
-      to: ToEmail,
-      bcc: BccEmail,
-      subject:subjectline,
-      htmlBody:body})
-  }
-  else
-  {
-    ui.alert('No Email sent.');
-  }
+function sendEmail()
+{
+    var subject = "Test Email";
+    var body = "<HTML><Body>This is a test email.</Body></HTML>";
+
+    MailApp.sendEmail(
+        {
+            to: 'xyz123@gmail.com',
+            subject: subject,
+            htmlBody: body,
+        }
+    )
 }
